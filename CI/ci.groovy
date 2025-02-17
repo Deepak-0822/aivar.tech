@@ -70,4 +70,10 @@ pipeline {
             echo "Pipeline failed. Check logs for errors."
         }
     }
+    stage('CleanWorkspace') {
+                    steps {
+                        cleanWs()
+                        echo 'Cleaned workspace'
+                    }
+    }
 }
